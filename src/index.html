@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-    @@include('html/_head.html', {
-    'title': ''
-    })
-    <body>
-        <div class="canvas">
-            <canvas id="canvas"></canvas>
-        </div>
-        <div class="wrapper">
-            @@include('html/_header.html', {
-            "active":0
-            })
-            <main class="page">
-
-            </main>
-            @@include('html/_footer.html', {})
-        </div>
-
-        @@include('html/_js.html', {})
-    </body>
-</html>
+@@include('html/_tempate.html', {
+"lang": "ru",
+"title": '<span class="lg-title">Готовы сорвать куш?</span> <span class="gradient-text">Крути</span> колесо - <span class="gradient-text">Выигрывай</span> по Крупному с <span class="gradient-text">Erabet.io</span>',
+"spinner-btn": 'крути',
+"title-popup": "Поздравляем!",
+"text-popup": 'Ты выиграл приветственный бонус в размере <span class="gradient-text">275% + 150 FS</span>',
+"btn-text": "Получить",
+"feedback": "Связаться с нами",
+"privacy-1": "Ответственная игра",
+"privacy-2": "Политика приватности"
+})

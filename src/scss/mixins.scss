@@ -90,17 +90,10 @@
 
 // Поддрежка свойств
 
-// $dimensions: (
-// 	desktop: 1708,
-// 	tablet: 768,
-// 	mobile: 360,
-// );
-
 $dimensions: (
-	fullHD: 1708,
-	desktop: 1024,
+	desktop: 1920,
 	tablet: 768,
-	mobile: 320,
+	mobile: 360,
 );
 
 @function pxToVw($value, $dimension) {
@@ -126,9 +119,6 @@ $dimensions: (
 }
 
 @function vw($value) {
-	@return pxToVw($value, fullHD);
-}
-@function vwd($value) {
 	@return pxToVw($value, desktop);
 }
 @function vwt($value) {
@@ -137,38 +127,3 @@ $dimensions: (
 @function vwm($value) {
 	@return pxToVw($value, mobile);
 }
-
-// @function pxToVw($value, $dimension) {
-// 	@return math.div($value * 100, map-get($dimensions, $dimension)) + vw;
-// }
-
-// @mixin font-size($sizeValue, $sizeValueTablet, $sizeValueMobile) {
-// 	// font-size: $sizeValue + px;
-// 	font-size: pxToVw($sizeValueMobile, mobile);
-
-// 	@media (min-width: $md5) {
-// 		font-size: pxToVw($sizeValueTablet, tablet);
-// 	}
-
-// 	@media (min-width: $md3) and (max-width: $md2) {
-// 		font-size: pxToVw($sizeValue, desktop);
-// 	}
-// 	@media (min-width: $md1) {
-// 		font-size: $sizeValue + px;
-// 	}
-// }
-// @mixin fs($sizeValue, $sizeValueTablet: $sizeValue, $sizeValueMobile: $sizeValue) {
-// 	@include font-size($sizeValue, $sizeValueTablet, $sizeValueMobile);
-// }
-// // @function vw($value, $dimension: mobile) {
-// // 	@return pxToVw($value, $dimension);
-// // }
-// @function vw($value) {
-// 	@return pxToVw($value, desktop);
-// }
-// @function vwt($value) {
-// 	@return pxToVw($value, tablet);
-// }
-// @function vwm($value) {
-// 	@return pxToVw($value, mobile);
-// }

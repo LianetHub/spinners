@@ -1,116 +1,13 @@
 //============ МОДУЛИ ====================
 @import "modules/popup";
-// @import "modules/breadcrumbs";
-// @import "modules/before-slider";
-// @import "modules/datepicker";
-@import "modules/select";
-@import "modules/tooltip";
 
 //============ МОДУЛИ ====================
-
-.color-accent {
-	color: $accent;
-}
-
-.color-green {
-	color: $green;
-}
-
-.title {
-	font-weight: 600;
-	line-height: 93%;
-	text-transform: uppercase;
-	font-size: 1.5rem;
-	letter-spacing: -0.075rem;
-	@media (min-width: $md4) {
-		letter-spacing: -0.13125rem;
-		font-size: 2.625rem;
-	}
-}
-
-.title-sm {
-	font-weight: 600;
-	line-height: 93%;
-	text-transform: uppercase;
-	font-size: 1.125rem;
-	letter-spacing: -0.05625rem;
-	@media (min-width: $md4) {
-		letter-spacing: -0.075rem;
-		font-size: 1.5rem;
-	}
-}
-
-.section-header {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	text-align: center;
-	gap: 1rem;
-	@media (min-width: $md4) {
-		text-align: left;
-		justify-content: space-between;
-		flex-direction: row;
-	}
-	// .section-header__title
-	&__title {
-		max-width: 28rem;
-	}
-	// .section-header__desc
-	&__desc {
-		color: rgba(255, 255, 255, 0.51);
-		font-weight: 300;
-		line-height: 131%;
-		font-size: 1rem;
-		@media (min-width: $md4) {
-			font-size: 1.125rem;
-			text-align: right;
-			max-width: 22rem;
-		}
-	}
-}
-
-.btn-copy {
-	color: $accent;
-	transition: color 0.3s ease 0s;
-	width: 1.5rem;
-	height: 1.5rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-shrink: 0;
-	position: relative;
-	@media (any-hover: hover) {
-		&:hover {
-			color: darken($color: $accent, $amount: 10);
-		}
-	}
-	.tooltip {
-		bottom: calc(100% + 0.25rem);
-		&::after {
-			border-top: rem(5) solid #171434;
-			bottom: rem(-4);
-		}
-	}
-}
-
-.text-left {
-	text-align: left !important;
-}
-
-.text-center {
-	text-align: center !important;
-	justify-content: center;
-}
-
-.mobile-only {
-	@media (min-width: $md4) {
-		display: none !important;
-	}
-}
-.pc-only {
-	@media (max-width: $md4) {
-		display: none !important;
-	}
+.gradient-text {
+	background-image: linear-gradient(270deg, #00ec9e 0%, #8e6efa 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: inline-block;
 }
 
 // ._loading {
@@ -176,7 +73,7 @@ $scrollbarHover: darken(
 	width: rem(8);
 }
 ::-webkit-scrollbar-track {
-	background: #141113;
+	background: #000;
 }
 ::-webkit-scrollbar-thumb {
 	background: #352c33;
