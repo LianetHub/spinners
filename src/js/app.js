@@ -44,7 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }], {
                 on: {
                     "done": (instance, current) => {
-                        spinnerImage.style = ""
+                        setTimeout(() => {
+                            spinnerImage.style = ""
+                        }, 1000)
                     }
                 }
             });
