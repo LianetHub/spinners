@@ -1,0 +1,12 @@
+.footer {
+	border: rem(1) solid rgba(217, 217, 217, 0.36);
+	text-align: center;
+	color: rgba(255, 255, 255, 0.51);
+	font-size: 1.125rem;
+	font-weight: 300;
+	line-height: 131%;
+	padding: 2.25rem 0;
+	// .footer__container
+	&__container {
+	}
+}

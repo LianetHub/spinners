@@ -1,0 +1,116 @@
+.fancybox__container {
+	max-width: 100% !important;
+	padding: 0 !important;
+}
+
+.fancybox__slide {
+	padding: 1rem;
+}
+
+.fancybox__backdrop {
+	background: rgba(0, 0, 0, 0.83);
+}
+
+.fancybox__content {
+	color: inherit;
+	background: none;
+	padding: 0;
+}
+
+.fancybox__content :focus:not(.carousel__button.is-close) {
+	outline: none;
+}
+
+.popup {
+	border: 1.5px solid rgba(255, 255, 255, 0.12);
+	background: #191618;
+	max-width: 39.0625rem;
+	position: relative;
+	border-radius: 0.625rem;
+	padding: 1.94rem 1.19rem 1.25rem;
+	display: none;
+	@media (min-width: $md4) {
+		padding: 1.94rem 3.12rem;
+		border-radius: 1.25rem;
+	}
+	// .popup__header
+	&__header {
+		@media (min-width: $md4) {
+			padding-right: 2rem;
+		}
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .popup__header-num
+	&__header-num {
+		color: rgba(255, 255, 255, 0.33);
+		font-size: 1rem;
+		font-weight: 600;
+		line-height: 93%;
+		letter-spacing: -0.05rem;
+	}
+	// .popup__header-name
+	&__header-name {
+		font-weight: 500;
+		font-size: 1.125rem;
+		margin-top: 0.75rem;
+		@media (min-width: $md4) {
+			margin-top: 0.5rem;
+			font-size: 1.25rem;
+		}
+	}
+	// .popup__close
+	&__close {
+		position: absolute;
+		top: 1.13rem;
+		right: 1rem;
+		@media (min-width: $md4) {
+			right: 1.38rem;
+		}
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+	// .popup__content
+	&__content {
+		margin-top: 1rem;
+		border-radius: 0.625rem;
+		border: 1.5px solid rgba(255, 255, 255, 0.12);
+		background: rgba(15, 12, 14, 0.5);
+		padding: 0.75rem 0 0.75rem 0.75rem;
+		@media (min-width: $md4) {
+			padding: 0.75rem;
+		}
+	}
+	// .popup__desc
+	&__desc {
+		max-width: 100%;
+		overflow-y: auto;
+		hyphens: auto;
+		padding: 1rem 0.65rem;
+		font-size: 0.9375rem;
+		font-weight: 400;
+		height: 22.2625rem;
+		@media (min-width: $md4) {
+			padding: 1rem 0.94rem;
+		}
+	}
+	// .popup__btn
+	&__btn {
+		margin-top: 0.56rem;
+		@media (min-width: $md4) {
+			margin-top: 0.75rem;
+		}
+		&.btn.btn-lg {
+			@media (max-width: $md4) {
+				padding: 0.5rem;
+				font-size: 0.75rem;
+			}
+			text-transform: none;
+		}
+	}
+}
