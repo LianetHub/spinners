@@ -434,6 +434,25 @@ body {
 			margin-left: -4rem;
 		}
 	}
+	// .main__spinner-main
+	&__spinner-main {
+		padding: 7% 6.5% 6.5%;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: url("@img/wheel-border.svg") center / contain no-repeat;
+			pointer-events: none;
+			z-index: 2;
+		}
+	}
+	// .main__spinner-dots
+	&__spinner-dots {
+	}
+	// .main__spinner-wheel
+	&__spinner-wheel {
+	}
 	// .main__spinner-image
 	&__spinner-image {
 		position: relative;
@@ -459,7 +478,7 @@ body {
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
-		z-index: 2;
+		z-index: 3;
 		& img {
 			width: 2.8235rem;
 			@media (min-width: $md5) {
@@ -500,13 +519,7 @@ body {
 		}
 		& span {
 			pointer-events: none;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				& span {
-					animation: pulse 1s ease infinite;
-				}
-			}
+			animation: pulse 1s ease infinite;
 		}
 	}
 }
@@ -528,5 +541,130 @@ body {
 	}
 	100% {
 		transform: rotate(var(--rotate-degrees));
+	}
+}
+
+.dot {
+	position: absolute;
+	z-index: 2;
+	height: 3.5%;
+	width: 3.5%;
+	border-radius: 50%;
+	background-color: rgb(255 255 255 / 1);
+	filter: drop-shadow(0 0 10px #ffffff);
+	&:nth-child(1) {
+		right: 36.3%;
+		top: 4.6%;
+	}
+
+	&:nth-child(2) {
+		right: 25.3%;
+		top: 9%;
+	}
+
+	&:nth-child(3) {
+		right: 15.8%;
+		top: 16.4%;
+	}
+
+	&:nth-child(4) {
+		right: 8.5%;
+		top: 25.5%;
+	}
+
+	&:nth-child(5) {
+		right: 4%;
+		top: 36.5%;
+	}
+
+	&:nth-child(6) {
+		right: 2.5%;
+		top: 48.5%;
+	}
+
+	&:nth-child(7) {
+		bottom: 36.5%;
+		right: 4%;
+	}
+
+	&:nth-child(8) {
+		bottom: 25.5%;
+		right: 8.5%;
+	}
+
+	&:nth-child(9) {
+		bottom: 15.8%;
+		right: 15.8%;
+	}
+
+	&:nth-child(10) {
+		bottom: 8.5%;
+		right: 25.4%;
+	}
+
+	&:nth-child(11) {
+		bottom: 4%;
+		right: 36.5%;
+	}
+
+	&:nth-child(12) {
+		bottom: 2.5%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&:nth-child(13) {
+		bottom: 4%;
+		left: 36.5%;
+	}
+
+	&:nth-child(14) {
+		bottom: 8.5%;
+		left: 25.4%;
+	}
+
+	&:nth-child(15) {
+		bottom: 16%;
+		left: 15.8%;
+	}
+
+	&:nth-child(16) {
+		bottom: 25.5%;
+		left: 8.5%;
+	}
+
+	&:nth-child(17) {
+		bottom: 36.5%;
+		left: 4%;
+	}
+
+	&:nth-child(18) {
+		left: 2.3%;
+		top: 48.3%;
+	}
+
+	&:nth-child(19) {
+		left: 36.3%;
+		top: 4.7%;
+	}
+
+	&:nth-child(20) {
+		left: 25.3%;
+		top: 9%;
+	}
+
+	&:nth-child(21) {
+		left: 15.8%;
+		top: 16.3%;
+	}
+
+	&:nth-child(22) {
+		left: 8.5%;
+		top: 25.8%;
+	}
+
+	&:nth-child(23) {
+		left: 4%;
+		top: 36.8%;
 	}
 }
