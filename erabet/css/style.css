@@ -349,6 +349,8 @@ body.lock {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 1.69rem;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
