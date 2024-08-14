@@ -160,8 +160,20 @@ body {
 			font-size: 2.875rem;
 		}
 		&.header__title-lg {
+			font-size: 1.75rem;
+			@media (max-width: $md5) {
+				.lg-title {
+					margin-bottom: 0.4rem;
+				}
+			}
 			@media (min-width: $md5) {
 				font-size: 3.39081rem;
+			}
+		}
+		&.header__title-md {
+			@media (max-width: $md5) {
+				font-size: 1.6rem;
+				max-width: 90%;
 			}
 		}
 		& .lg-title {
@@ -195,7 +207,7 @@ body {
 		align-items: center;
 		justify-content: center;
 		flex-wrap: wrap;
-		gap: 1.125rem;
+		gap: 1rem;
 		@media (min-width: $md5) {
 			gap: 2rem;
 			justify-content: stretch;
@@ -220,6 +232,10 @@ body {
 	// .footer__feedback
 	&__feedback {
 		font-size: 0.875rem;
+		@media (max-width: $md5) {
+			flex: 0 0 100%;
+			text-align: center;
+		}
 		& a {
 			transition: color 0.3s ease 0s;
 			@media (any-hover: hover) {

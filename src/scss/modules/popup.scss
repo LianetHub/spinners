@@ -32,6 +32,11 @@
 	text-align: center;
 	max-width: 20rem;
 	width: 100%;
+	&.popup-md {
+		@media (max-width:$md5) {
+			padding: 1.74rem 2rem 1.53rem;
+		}
+	}
 	@media (min-width: $md5) {
 		padding: 4.31rem rem(60) 3rem;
 		max-width: 41.5rem;
@@ -110,7 +115,7 @@
 		line-height: 100%;
 		text-transform: uppercase;
 		border-radius: em(0.875, 2.4375);
-		padding: em(2, 2.4375) em(5.06, 2.4375) em(2, 2.4375);
+		padding: em(2, 2.4375) em(2, 2.4375) em(2, 2.4375);
 		width: fit-content;
 		width: auto;
 		display: flex;

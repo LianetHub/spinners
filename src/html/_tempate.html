@@ -10,7 +10,7 @@
                     <a href="/" class="header__logo">
                         <img src="@img/logo.svg" alt="logo">
                     </a>
-                    <h1 class="header__title@@if(lang==='en'){ header__title-lg}">
+                    <h1 class="header__title@@if(lang==='en'){ header__title-lg}@@if(lang==='es'){ header__title-md}">
                         @@title
                     </h1>
                 </div>
@@ -148,7 +148,7 @@
                 </div>
             </footer>
         </div>
-        <div id="congratulations" class="popup">
+        <div id="congratulations" class="popup@@if(lang==='es'){ popup-md}@@if(lang==='en'){ popup-md}">
             <div class="popup__content">
                 <div class="popup__title gradient-text">
                     @@title-popup
