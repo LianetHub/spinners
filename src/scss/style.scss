@@ -331,6 +331,7 @@ body {
 	flex-direction: column;
 	position: relative;
 	padding: 1rem 0 0 0;
+
 	@media (min-width: $md5) {
 		padding: 0;
 	}
@@ -460,7 +461,7 @@ body {
 		align-items: center;
 		background: url("@img/btn-bg.png") center / contain no-repeat;
 		color: #fff;
-		text-shadow: 0 rem(4.966) rem(4.966) rgba(0, 0, 0, 0.25);
+
 		font-weight: 800;
 		line-height: 100%;
 		text-transform: uppercase;
@@ -472,8 +473,9 @@ body {
 			width: rem(170);
 			height: rem(170);
 			color: #fff;
-			-webkit-text-stroke-width: rem(1);
-			-webkit-text-stroke-color: #000;
+			text-shadow: rgb(0, 0, 0) rem(1) 0 0, rgb(0, 0, 0) rem(0.540302) rem(0.841471) 0, rgb(0, 0, 0) rem(-0.416147) rem(0.909297) 0,
+				rgb(0, 0, 0) rem(-0.989992) rem(0.14112) 0, rgb(0, 0, 0) rem(-0.653644) rem(-0.756802) rem(0), rgb(0, 0, 0) rem(0.283662) rem(-0.958924) 0,
+				rgb(0, 0, 0) rem(0.96017) rem(-0.279415) 0;
 			box-shadow: 0 0 rem(18) 0 #1e1d22;
 			font-size: 2.4375rem;
 			font-weight: 800;
