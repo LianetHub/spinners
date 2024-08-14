@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     spinnerBtn.addEventListener('click', () => {
 
-        const turns = 2.5;
+        const turns = 2.375;
         const duration = 3;
 
         const totalDegrees = turns * 360;
