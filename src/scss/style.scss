@@ -274,6 +274,10 @@ body {
 		width: rem(2);
 		height: rem(29);
 		background: #fff;
+		@media (min-width: $md5) {
+			width: rem(4);
+			height: rem(52);
+		}
 		@media (min-width: $md4) {
 			display: none;
 		}
@@ -281,6 +285,9 @@ body {
 	// .main__brand
 	&__brand {
 		max-width: rem(50);
+		@media (min-width: $md5) {
+			max-width: rem(150);
+		}
 		@media (min-width: $md4) {
 			display: none;
 		}
@@ -293,6 +300,7 @@ body {
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
+
 		@media (min-width: $md4) {
 			text-align: left;
 			align-items: stretch;
@@ -301,7 +309,7 @@ body {
 	// .main__logo
 	&__logo {
 		max-width: rem(153);
-		@media (min-width: $md4) {
+		@media (min-width: $md5) {
 			max-width: 100%;
 		}
 	}
@@ -310,6 +318,9 @@ body {
 		margin-top: 0.5rem;
 		font-size: 1.5625rem;
 		max-width: 80%;
+		@media (min-width: $md5) {
+			font-size: 3.5rem;
+		}
 		@media (min-width: $md4) {
 			max-width: 100%;
 			font-size: 2.50606rem;
@@ -327,12 +338,12 @@ body {
 		margin-top: 0.5rem;
 		max-width: 56.5625rem;
 		&.main__title-lg {
-			font-size: 4.2355rem;
-			@media (max-width: $md4) {
-				font-size: 2.1875rem;
+			font-size: 2.1875rem;
+			@media (min-width: $md5) {
+				font-size: 4.2355rem;
 			}
 		}
-		@media (min-width: $md4) {
+		@media (min-width: $md5) {
 			margin-top: 3.25rem;
 			font-size: 3.70188rem;
 		}
@@ -357,7 +368,7 @@ body {
 		font-size: 1.1875rem;
 		padding: 0.75rem 2.19rem;
 		transition: opacity 0.3s ease 0s;
-		@media (min-width: $md4) {
+		@media (min-width: $md5) {
 			padding: 1.25rem 3.44rem;
 			font-size: 1.9375rem;
 		}
@@ -400,10 +411,13 @@ body {
 		gap: 1.19rem;
 		font-weight: 500;
 		font-size: 1.125rem;
+		@media (min-width: $md5) {
+			font-size: 1.75rem;
+		}
 		@media (min-width: $md4) {
 			font-size: 1.1875rem;
 		}
-		@media (max-width: $md4) {
+		@media (max-width: $md5) {
 			padding-right: 2rem;
 			&:last-child {
 				padding-right: 3rem;
@@ -413,7 +427,7 @@ body {
 	// .main__benefits-icon
 	&__benefits-icon {
 		flex: 0 0 3rem;
-		@media (min-width: $md4) {
+		@media (min-width: $md5) {
 			flex: 0 0 4.0625rem;
 		}
 	}
@@ -423,7 +437,7 @@ body {
 	// .main__image
 	&__image {
 		position: relative;
-		margin: 0 -1rem;
+
 		&::before {
 			content: "";
 			position: absolute;
@@ -432,6 +446,10 @@ body {
 			width: 100%;
 			height: 8.625rem;
 			background: linear-gradient(180deg, rgba(14, 1, 2, 0) 0%, #0e0102 100%);
+		}
+		margin: 0 -1rem;
+		@media (min-width: $md5) {
+			margin: 8rem -1rem 0;
 		}
 		@media (min-width: $md4) {
 			display: none;
@@ -453,7 +471,7 @@ body {
 		width: 3.0625rem;
 		height: 3.0625rem;
 		margin-left: -3.0625rem;
-		@media (min-width: $md4) {
+		@media (min-width: $md5) {
 			margin-left: 0;
 			border-radius: 0.75rem;
 			font-size: 1.6875rem;

@@ -405,7 +405,7 @@ body.lock {
 }
 
 .main__title.main__title-lg {
-  font-size: 4.2355rem;
+  font-size: 2.1875rem;
 }
 
 .main__start {
@@ -631,6 +631,59 @@ body.lock {
   .footer__payment img {
     max-height: 1.8125rem;
   }
+
+  .main__separator {
+    width: 0.25rem;
+    height: 3.25rem;
+  }
+
+  .main__brand {
+    max-width: 9.375rem;
+  }
+
+  .main__logo {
+    max-width: 100%;
+  }
+
+  .main__tagline {
+    font-size: 3.5rem;
+  }
+
+  .main__title.main__title-lg {
+    font-size: 4.2355rem;
+  }
+
+  .main__title {
+    margin-top: 3.25rem;
+    font-size: 3.70188rem;
+  }
+
+  .main__start-btn {
+    padding: 1.25rem 3.44rem;
+    font-size: 1.9375rem;
+  }
+
+  .main__benefits-item {
+    font-size: 1.75rem;
+  }
+
+  .main__benefits-icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 4.0625rem;
+            flex: 0 0 4.0625rem;
+  }
+
+  .main__image {
+    margin: 8rem -1rem 0;
+  }
+
+  .main__age {
+    margin-left: 0;
+    border-radius: 0.75rem;
+    font-size: 1.6875rem;
+    width: 4.0625rem;
+    height: 4.0625rem;
+  }
 }
 
 @media (min-width: 743.98px) {
@@ -657,28 +710,14 @@ body.lock {
             align-items: stretch;
   }
 
-  .main__logo {
-    max-width: 100%;
-  }
-
   .main__tagline {
     max-width: 100%;
     font-size: 2.50606rem;
     margin-top: 7.65rem;
   }
 
-  .main__title {
-    margin-top: 3.25rem;
-    font-size: 3.70188rem;
-  }
-
   .main__start {
     margin-top: 2.75rem;
-  }
-
-  .main__start-btn {
-    padding: 1.25rem 3.44rem;
-    font-size: 1.9375rem;
   }
 
   .main__start-logo {
@@ -700,22 +739,8 @@ body.lock {
     font-size: 1.1875rem;
   }
 
-  .main__benefits-icon {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 4.0625rem;
-            flex: 0 0 4.0625rem;
-  }
-
   .main__image {
     display: none;
-  }
-
-  .main__age {
-    margin-left: 0;
-    border-radius: 0.75rem;
-    font-size: 1.6875rem;
-    width: 4.0625rem;
-    height: 4.0625rem;
   }
 }
 
@@ -774,9 +799,12 @@ body.lock {
   }
 }
 
-@media (max-width: 743.98px) {
-  .main__title.main__title-lg {
-    font-size: 2.1875rem;
+@media (max-width: 575.98px) {
+  .footer__feedback {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    text-align: center;
   }
 
   .main__benefits-item {
@@ -785,15 +813,6 @@ body.lock {
 
   .main__benefits-item:last-child {
     padding-right: 3rem;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .footer__feedback {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-    text-align: center;
   }
 }
 
