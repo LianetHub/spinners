@@ -64,7 +64,7 @@ html {
 body {
 	font-family: $fontfamily, sans-serif;
 	font-size: 1rem;
-	min-width: 320px;
+	min-width: rem(320);
 	min-height: 100%;
 	line-height: normal;
 	color: $text;
