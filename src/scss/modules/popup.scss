@@ -122,9 +122,10 @@
 			font-size: 3.0625rem;
 		}
 		font-weight: 600;
-		line-height: 1.2;
+		line-height: 1;
 		& span {
 			font-weight: 700;
+			display: inline;
 		}
 	}
 	// .popup__btn

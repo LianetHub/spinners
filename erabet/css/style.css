@@ -125,11 +125,12 @@ body.lock {
   font-size: 1.425rem;
   margin-top: 0.82rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 .popup__text span {
   font-weight: 700;
+  display: inline;
 }
 
 .popup__btn {
@@ -520,6 +521,7 @@ body.lock {
   font-size: 1.0625rem;
   width: 5rem;
   height: 5rem;
+  text-shadow: rgb(0, 0, 0) 0.0625rem 0 0, rgb(0, 0, 0) 0.033768875rem 0.0525919375rem 0, rgb(0, 0, 0) -0.0260091875rem 0.0568310625rem 0, rgb(0, 0, 0) -0.0618745rem 0.00882rem 0, rgb(0, 0, 0) -0.04085275rem -0.047300125rem 0rem, rgb(0, 0, 0) 0.017728875rem -0.05993275rem 0, rgb(0, 0, 0) 0.060010625rem -0.0174634375rem 0;
 }
 
 .main__spinner-btn span {
@@ -890,7 +892,6 @@ body.lock {
     width: 10.625rem;
     height: 10.625rem;
     color: #fff;
-    text-shadow: rgb(0, 0, 0) 0.0625rem 0 0, rgb(0, 0, 0) 0.033768875rem 0.0525919375rem 0, rgb(0, 0, 0) -0.0260091875rem 0.0568310625rem 0, rgb(0, 0, 0) -0.0618745rem 0.00882rem 0, rgb(0, 0, 0) -0.04085275rem -0.047300125rem 0rem, rgb(0, 0, 0) 0.017728875rem -0.05993275rem 0, rgb(0, 0, 0) 0.060010625rem -0.0174634375rem 0;
     -webkit-box-shadow: 0 0 1.125rem 0 #1e1d22;
             box-shadow: 0 0 1.125rem 0 #1e1d22;
     font-size: 2.4375rem;
