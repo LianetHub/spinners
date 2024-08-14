@@ -154,9 +154,8 @@ body {
 		text-transform: uppercase;
 		font-size: 1.25rem;
 		width: 100%;
-		line-height: 1.1;
+
 		@media (min-width: $md5) {
-			line-height: 1.2;
 			font-size: 3.1875rem;
 		}
 		&.header__title-lg {
@@ -172,7 +171,6 @@ body {
 				letter-spacing: normal;
 			}
 			@media (min-width: $md5) {
-				margin-top: -0.15em;
 				font-size: 4rem;
 			}
 		}
