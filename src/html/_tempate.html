@@ -5,57 +5,54 @@
     })
     <body>
         <div class="wrapper">
-            <header class="header">
-                <div class="header__container">
-                    <a href="/" class="header__logo">
-                        <img src="@img/logo.svg" alt="logo">
-                    </a>
-                    <h1 class="header__title">
-                        @@title
-                    </h1>
-                </div>
-            </header>
+
             <main class="page">
                 <section class="main">
                     <div class="main__container">
-                        <div class="main__spinner">
-                            <div class="main__spinner-image">
-                                <div class="main__spinner-selector">
-                                    <img src="@img/selector.png" alt="selector">
+                        <div class="main__offer">
+                            <div class="main__header">
+                                <a href="/" class="main__logo">
+                                    <img src="@img/logo.svg" alt="logo">
+                                </a>
+                                <span class="main__separator"></span>
+                                <div class="main__brand">
+                                    <img src="@img/big-bass.png" alt="big bass">
                                 </div>
-                                <div class="main__spinner-main">
-                                    <div class="main__spinner-dots">
-                                        <div class="dot dot-even"></div>
-                                        <div class="dot dot-odd"></div>
-                                        <div class="dot dot-even"></div>
-                                        <div class="dot dot-odd"></div>
-                                        <div class="dot dot-even"></div>
-                                        <div class="dot dot-odd"></div>
-                                        <div class="dot dot-even"></div>
-                                        <div class="dot dot-odd"></div>
-                                        <div class="dot dot-even"></div>
-                                        <div class="dot dot-odd"></div>
-                                        <div class="dot dot-even"></div>
-                                        <div class="dot dot-odd"></div>
-                                        <div class="dot dot-even"></div>
-                                        <div class="dot dot-odd"></div>
-                                        <div class="dot dot-even"></div>
-                                        <div class="dot dot-odd"></div>
-                                    </div>
-                                    <div class="main__spinner-wheel">
-                                        <img src="@img/wheel.svg" alt="wheel">
-                                    </div>
+                            </div>
+                            <p class="main__tagline">@@tagline</p>
+                            <div class="main__image">
+                                <img src="@img/img.png" alt="img">
+                            </div>
+                            <h1 class="main__title@@if(lang==='en'){ main__title-lg}@@if(lang==='es'){ main__title-lg}">@@title</h1>
+                            <div class="main__start">
+                                <a href="" class="main__start-btn">@@btn-text</a>
+                                <div class="main__start-logo">
+                                    <img src="@img/big-bass.png" alt="big bass">
                                 </div>
-                                <button type="button" class="main__spinner-btn">
-                                    <span>
-                                        @@spinner-btn
-                                    </span>
-                                </button>
                             </div>
                         </div>
-
-                        <div class="main__image-mobile">
-                            <img src="@img/mobile-img.png" alt="img">
+                        <div class="main__footer">
+                            <ul class="main__benefits">
+                                <li class="main__benefits-item">
+                                    <div class="main__benefits-icon">
+                                        <img src="@img/benefits/01.svg" alt="icon">
+                                    </div>
+                                    <div class="main__benefits-text">@@benefit-1</div>
+                                </li>
+                                <li class="main__benefits-item">
+                                    <div class="main__benefits-icon">
+                                        <img src="@img/benefits/02.svg" alt="icon">
+                                    </div>
+                                    <div class="main__benefits-text">@@benefit-2</div>
+                                </li>
+                                <li class="main__benefits-item">
+                                    <div class="main__benefits-icon">
+                                        <img src="@img/benefits/03.svg" alt="icon">
+                                    </div>
+                                    <div class="main__benefits-text">@@benefit-3</div>
+                                </li>
+                            </ul>
+                            <div class="main__age">18+</div>
                         </div>
                     </div>
                 </section>
@@ -135,17 +132,6 @@
                     </div>
                 </div>
             </footer>
-        </div>
-        <div id="congratulations" class="popup@@if(lang==='en'){ popup-lg}@@if(lang==='es'){ popup-md}">
-            <div class="popup__content">
-                <div class="popup__title gradient-text">
-                    @@title-popup
-                </div>
-                <div class="popup__text">
-                    @@text-popup
-                </div>
-                <a href="" class="popup__btn@@if(lang==='en'){ popup__btn-lg}">@@btn-text</a>
-            </div>
         </div>
         @@include('_js.html', {})
     </body>
