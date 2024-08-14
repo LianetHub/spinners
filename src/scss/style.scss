@@ -149,7 +149,7 @@ body {
 	&__title {
 		color: #fff;
 		text-align: center;
-		text-shadow: 0 rem(3.373) rem(3.373) rgba(0, 0, 0, 0.25);
+		filter: drop-shadow(0 rem(2) rem(61.5) #00FFA3);
 		font-weight: 800;
 		text-transform: uppercase;
 		font-size: 1.45rem;
@@ -173,6 +173,7 @@ body {
 				font-size: 3.1875rem;
 			}
 		}
+	
 		@media (min-width: $md3) {
 			max-width: 80%;
 		}
@@ -360,7 +361,7 @@ body {
 	// .main__container
 	&__container {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		max-width: rem(1920);
 		padding: 0;
@@ -443,7 +444,7 @@ body {
 			content: "";
 			position: absolute;
 			inset: 0;
-			background: url("@img/wheel-border.svg") center / contain no-repeat;
+			background: url("@img/wheel-border.png") center / contain no-repeat;
 			pointer-events: none;
 			z-index: 2;
 		}
