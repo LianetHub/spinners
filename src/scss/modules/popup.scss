@@ -24,63 +24,90 @@
 .popup {
 	position: relative;
 	display: none;
-	border-radius: 0.5rem;
-	border: rem(2) solid #7a7474;
-	background: #000;
+	border-radius: 0.5625rem;
 	color: #fff;
-	padding: 1.74rem 3.2rem 1.53rem;
+	padding: 1.44rem 1rem;
 	text-align: center;
-	max-width: 20rem;
+	max-width: 100%;
 	width: 100%;
-	&.popup-md {
-		@media (max-width:$md5) {
-			padding: 1.74rem 2rem 1.53rem;
-		}
-	}
+	background: linear-gradient(90deg, #8a6ff2 0%, #02e8a4 100%);
 	@media (min-width: $md5) {
-		padding: 4.31rem rem(60) 3rem;
-		max-width: 41.5rem;
+		border-radius: 1.375rem;
+		padding: 3rem rem(30);
+		max-width: 55.5rem;
 	}
-	& [data-fancybox-close] {
-		top: 0 !important;
-		right: 0 !important;
+	&::after {
+		content: "";
+		position: absolute;
+		inset: rem(2);
+		background: #0f172b;
+		z-index: -1;
+		border-radius: 0.5rem;
 		@media (min-width: $md5) {
-			top: 1rem !important;
-			right: 1rem !important;
+			border-radius: 1.375rem;
 		}
 	}
 	&::before {
 		content: "";
 		position: absolute;
-		width: rem(80);
-		height: rem(100);
-		left: -1.5rem;
-		top: -2.5rem;
+		inset: 0;
+		background: linear-gradient(90deg, #8a6ff2 0%, #02e8a4 100%);
+		filter: blur(rem(31));
+		z-index: -1;
+		border-radius: 0.5rem;
 		@media (min-width: $md5) {
-			top: -4rem;
-			left: -4rem;
-			width: rem(159);
-			height: rem(171);
+			border-radius: 1.375rem;
 		}
-		pointer-events: none;
-		background: url("@img/inferno-joker.png") center / contain no-repeat;
 	}
-	&::after {
-		content: "";
-		position: absolute;
-		width: rem(130);
-		height: rem(130);
-		bottom: -3.5rem;
-		right: -2rem;
-		@media (min-width: $md5) {
-			width: rem(266);
-			height: rem(266);
-			bottom: -6rem;
-			right: -6rem;
+	&#congratulations {
+		.popup__text {
+			margin-top: 1.5rem;
+			@media (min-width: $md2) {
+				margin-top: 4rem;
+			}
 		}
-		pointer-events: none;
-		background: url("@img/symbol_bar.png") center / contain no-repeat;
+		.popup__btn {
+			@media (min-width: $md2) {
+				margin-top: 3.5rem;
+			}
+		}
+		.popup__content {
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				width: 4.5rem;
+				height: 3rem;
+				bottom: -2.5rem;
+				left: -2.75rem;
+				@media (min-width: $md5) {
+					bottom: -5.5rem;
+					left: -5rem;
+					width: 10rem;
+					height: 7rem;
+				}
+				background: url("@img/gem.png") center / contain no-repeat;
+				pointer-events: none;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				width: 5.5rem;
+				height: 3rem;
+				right: -3.5rem;
+				top: -2.5rem;
+				@media (min-width: $md5) {
+					top: -6rem;
+					right: -6.5rem;
+					width: 12rem;
+					height: 8rem;
+				}
+				background: url("@img/gem-2.png") center / contain no-repeat;
+				pointer-events: none;
+			}
+		}
 	}
+	// .popup__content
 	&__content {
 		display: flex;
 		flex-direction: column;
@@ -89,63 +116,33 @@
 	// .popup__title
 	&__title {
 		font-weight: 700;
-		font-size: 1.75rem;
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		line-height: 1;
+		max-width: 32.5rem;
+		margin: 0 auto;
 		@media (min-width: $md5) {
 			font-size: 3.75rem;
 		}
 	}
 	// .popup__text
 	&__text {
-		font-size: 1.425rem;
-		margin-top: 0.82rem;
+		text-align: center;
+		font-weight: 700;
+		line-height: 109%;
+		text-transform: uppercase;
+		font-size: 1.25rem;
+		margin-top: 0.75rem;
 		@media (min-width: $md5) {
-			margin-top: 1.5rem;
-			font-size: 3.0625rem;
-		}
-		font-weight: 600;
-		line-height: 100%;
-		& span {
-			font-weight: 700;
+			margin-top: 1.81rem;
+			font-size: 3.4375rem;
 		}
 	}
 	// .popup__btn
 	&__btn {
-		background: linear-gradient(270deg, #00ec9e 0%, #8e6efa 100%);
-		font-weight: 600;
-		line-height: 100%;
-		text-transform: uppercase;
-		border-radius: em(0.875, 2.4375);
-		padding: em(2, 2.4375) em(2, 2.4375) em(2, 2.4375);
-		width: fit-content;
-		width: auto;
-		display: flex;
-		justify-content: center;
-		position: relative;
-		z-index: 1;
-		font-size: 1.15rem;
-		margin: 1rem auto 0;
-		text-align: center;
-		@media (min-width: $md5) {
-			min-width: rem(373);
-			padding: em(1.5, 2.4375) rem(30) em(1.7, 2.4375);
-			margin: 2.5rem auto 0;
-			font-size: 2.4375rem;
-		}
-		&::before {
-			content: "";
-			position: absolute;
-			inset: em(0.25, 2.4375);
-			background: #313131;
-			z-index: -1;
-			border-radius: em(0.75, 2.4375);
-			transition: background-color 0.3s ease 0s;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				&::before {
-					background: #131313;
-				}
-			}
+		margin-top: rem(16);
+		@media (min-width: $md2) {
+			margin-top: rem(28);
 		}
 	}
 }

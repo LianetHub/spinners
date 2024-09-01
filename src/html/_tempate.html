@@ -20,8 +20,10 @@
                 <section class="main">
                     <div class="main__container">
                         <div class="main__body">
-                            <h2 class="main__title">@@main-title</h2>
-                            <p class="main__subtitle gradient-text">@@main-subtitle</p>
+                            <div class="main__header">
+                                <h2 class="main__title">@@main-title</h2>
+                                <p class="main__subtitle gradient-text">@@main-subtitle</p>
+                            </div>
                             <div class="main__label">
                                 @@main-label
                                 <a href="" class="main__label-link">@@mail-label-link</a>
@@ -34,7 +36,6 @@
                                 </div>
                                 <div class="main__spinner-main">
                                     <div class="main__spinner-dots">
-                                        <div class="dot dot-even"></div>
                                         <div class="dot dot-odd"></div>
                                         <div class="dot dot-even"></div>
                                         <div class="dot dot-odd"></div>
@@ -46,20 +47,20 @@
                                         <div class="dot dot-odd"></div>
                                         <div class="dot dot-even"></div>
                                         <div class="dot dot-odd"></div>
-                                        <div class="dot dot-even"></div>
-                                        <div class="dot dot-odd"></div>
-                                        <div class="dot dot-even"></div>
-                                        <div class="dot dot-odd"></div>
-                                        <div class="dot dot-even"></div>
-                                        <div class="dot dot-odd"></div>
-                                        <div class="dot dot-even"></div>
-                                        <div class="dot dot-odd"></div>
-                                        <div class="dot dot-even"></div>
-                                        <div class="dot dot-odd"></div>
-                                        <div class="dot dot-even"></div>
                                     </div>
                                     <div class="main__spinner-wheel">
                                         <img src="@img/wheel.svg" alt="wheel">
+                                    </div>
+                                </div>
+                                <div class="main__spinner-decor">
+                                    <div class="main__spinner-decor-img">
+                                        <img src="@img/br.svg" alt="decor">
+                                    </div>
+                                    <div class="main__spinner-decor-img">
+                                        <img src="@img/cherry.png" alt="decor">
+                                    </div>
+                                    <div class="main__spinner-decor-img">
+                                        <img src="@img/seven.png" alt="decor">
                                     </div>
                                 </div>
                                 <button type="button" class="main__spinner-btn">
@@ -115,7 +116,18 @@
                 </div>
             </footer>
         </div>
-        <div id="congratulations" class="popup@@if(lang==='es'){ popup-md}@@if(lang==='en'){ popup-md}">
+        <div id="sorry" class="popup">
+            <div class="popup__content">
+                <div class="popup__title gradient-text">
+                    @@sorry-title
+                </div>
+                <div class="popup__text">
+                    @@sorry-text
+                </div>
+                <button type="button" data-fancybox-close class="popup__btn btn">@@sorry-btn</bu>
+            </div>
+        </div>
+        <div id="congratulations" class="popup">
             <div class="popup__content">
                 <div class="popup__title gradient-text">
                     @@title-popup
@@ -123,7 +135,7 @@
                 <div class="popup__text">
                     @@text-popup
                 </div>
-                <a href="https://erabet.io/@@lang/?sign-up=modal" class="popup__btn btn-sign">@@btn-text</a>
+                <a href="https://erabet.io/@@lang/?sign-up=modal" class="popup__btn btn btn-sign">@@btn-text</a>
             </div>
         </div>
         @@include('_js.html', {})

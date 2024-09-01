@@ -93,7 +93,7 @@
 $dimensions: (
 	desktop: 1920,
 	tablet: 768,
-	mobile: 360,
+	mobile: 375,
 );
 
 @function pxToVw($value, $dimension) {

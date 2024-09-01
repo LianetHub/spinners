@@ -13,10 +13,16 @@
 .btn {
 	color: #0f172b;
 	text-align: center;
-	font-size: 2rem;
+	font-size: 0.875rem;
+	padding: em(1.25, 2) em(3.44, 2);
+	@media (min-width: $md5) {
+		font-size: 1.5rem;
+	}
+	@media (min-width: $md2) {
+		font-size: 2rem;
+	}
 	font-weight: 700;
-	letter-spacing: 0.02rem;
-	padding: 1.25rem 3.44rem;
+	letter-spacing: em(0.02, 2);
 	border-radius: 3.0625rem;
 	background: linear-gradient(95deg, #8a6ff2 0.83%, #02e8a4 99.17%);
 	position: relative;
