@@ -10,21 +10,27 @@
                     <a href="/" class="header__logo">
                         <img src="@img/logo.svg" alt="logo">
                     </a>
-                    <h1 class="header__title@@if(lang==='en'){ header__title-lg}@@if(lang==='es'){ header__title-md}">
+                    <h1 class="header__title">
                         @@title
                     </h1>
+                    <a href="https://erabet.io/@@lang/?sign-up=modal" class="header__btn btn btn-sign">@@header-btn-text</a>
                 </div>
             </header>
             <main class="page">
                 <section class="main">
                     <div class="main__container">
-                        <div class="main__image">
-                            <img src="@img/img-1.png" alt="img">
+                        <div class="main__body">
+                            <h2 class="main__title">@@main-title</h2>
+                            <p class="main__subtitle gradient-text">@@main-subtitle</p>
+                            <div class="main__label">
+                                @@main-label
+                                <a href="" class="main__label-link">@@mail-label-link</a>
+                            </div>
                         </div>
                         <div class="main__spinner">
                             <div class="main__spinner-image">
                                 <div class="main__spinner-selector">
-                                    <img src="@img/selector.svg" alt="selector">
+                                    <img src="@img/selector.png" alt="selector">
                                 </div>
                                 <div class="main__spinner-main">
                                     <div class="main__spinner-dots">
@@ -63,12 +69,6 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="main__image">
-                            <img src="@img/img-2.png" alt="img">
-                        </div>
-                        <div class="main__image-mobile">
-                            <img src="@img/mobile-img.png" alt="img">
-                        </div>
                     </div>
                 </section>
             </main>
@@ -80,51 +80,18 @@
                     <div class="footer__age">
                         <img src="@img/age.svg" alt="18+">
                     </div>
-                    <div class="footer__feedback">
-                        @@feedback:<a href="mailto:hello@erabet.io">hello@erabet.io</a>
+                    <div class="footer__copyright">
+                        Copyright © 2024 www.erabet.io. All rights reserved.
                     </div>
                     <div class="footer__links">
                         <a href="" class="footer__link">@@privacy-1</a>
                         <a href="" class="footer__link">@@privacy-2</a>
                     </div>
-                    <div class="footer__socials">
-                        <a href="" class="footer__social">
-                            <img src="@img/icons/telegram.svg" alt="telegram icon">
-                        </a>
-                        <a href="" class="footer__social">
-                            <img src="@img/icons/facebook.svg" alt="facebook icon">
-                        </a>
-                        <a href="" class="footer__social">
-                            <img src="@img/icons/instagram.svg" alt="instagram icon">
-                        </a>
-                        <a href="" class="footer__social">
-                            <img src="@img/icons/x.svg" alt="x icon">
-                        </a>
-                        <a href="" class="footer__social">
-                            <img src="@img/icons/tiktok.svg" alt="tiktok icon">
-                        </a>
-                    </div>
                     <div class="footer__payments">
-                        @@if(lang==='ru') {
+                        @@if(lang==='pt-BR') {
                         <div class="footer__payment">
-                            <img src="@img/visa.svg" alt="payment">
+                            <img src="@img/bank-transfer.svg" alt="payment">
                         </div>
-                        <div class="footer__payment">
-                            <img src="@img/mastercard.svg" alt="payment">
-                        </div>
-                        }
-                        @@if(lang==='es') {
-                        <div class="footer__payment">
-                            <img src="@img/directa.png" alt="payment">
-                        </div>
-                        <div class="footer__payment">
-                            <img src="@img/paysafe.png" alt="payment">
-                        </div>
-                        <div class="footer__payment">
-                            <img src="@img/safety-pay.png" alt="payment">
-                        </div>
-                        }
-                        @@if(lang==='en') {
                         <div class="footer__payment">
                             <img src="@img/visa.svg" alt="payment">
                         </div>
@@ -132,16 +99,16 @@
                             <img src="@img/mastercard.svg" alt="payment">
                         </div>
                         <div class="footer__payment">
-                            <img src="@img/bank-tr.svg" alt="payment">
+                            <img src="@img/neteller.svg" alt="payment">
                         </div>
                         <div class="footer__payment">
-                            <img src="@img/pay-id.svg" alt="payment">
+                            <img src="@img/payfun.svg" alt="payment">
                         </div>
                         <div class="footer__payment">
-                            <img src="@img/neosurf.svg" alt="payment">
+                            <img src="@img/astropay.svg" alt="payment">
                         </div>
                         <div class="footer__payment">
-                            <img src="@img/mifinity.svg" alt="payment">
+                            <img src="@img/pix.svg" alt="payment">
                         </div>
                         }
                     </div>
@@ -156,7 +123,7 @@
                 <div class="popup__text">
                     @@text-popup
                 </div>
-                <a href="" class="popup__btn">@@btn-text</a>
+                <a href="https://erabet.io/@@lang/?sign-up=modal" class="popup__btn btn-sign">@@btn-text</a>
             </div>
         </div>
         @@include('_js.html', {})
