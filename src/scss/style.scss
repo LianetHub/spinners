@@ -1,8 +1,8 @@
 // Использование модулей SASS
-@use "sass:math";
+@use 'sass:math';
 // Использование модулей SASS
 // ======================================МИКСИНЫ==============================================
-@import "mixins";
+@import 'mixins';
 // ======================================МИКСИНЫ==============================================
 
 // ======================================ШРИФТЫ===============================================
@@ -14,7 +14,7 @@
 // ======================================ИКОНОЧНЫЙ ШРИФТ======================================
 
 // Шрифт по умолчанию
-$fontfamily: "Manrope";
+$fontfamily: 'Manrope';
 
 // Шрифт по умолчанию
 
@@ -85,20 +85,20 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	background: url("@img/bg-mobile.png") center 0 / cover no-repeat, #240057;
+	background: url('@img/bg-mobile.png') center 0 / cover no-repeat, #240057;
 	@media (min-width: $md5) {
-		background: url("@img/bg.png") center 0 / cover no-repeat, #240057;
+		background: url('@img/bg.png') center 0 / cover no-repeat, #240057;
 	}
 }
 
 //================== ОБОЛОЧКА==================================
 
-@import "./ui";
+@import './ui';
 
 //=============== ОСНОВНАЯ СЕТКА===============================
 
 // Отзывчивая
-[class*="__container"] {
+[class*='__container'] {
 	margin: 0 auto;
 	box-sizing: border-box;
 	max-width: 100%;
@@ -157,7 +157,7 @@ body {
 			font-size: 2rem;
 		}
 		@media (min-width: $md3) {
-			max-width: rem(760);
+			max-width: rem(860);
 			order: 0;
 			flex: 1 1 auto;
 		}
@@ -282,6 +282,8 @@ body {
 	}
 	// .footer__payment
 	&__payment {
+		display: flex;
+		align-items: center;
 		& img {
 			max-height: 2.3125rem;
 			@media (min-width: $md5) {
@@ -330,7 +332,6 @@ body {
 			margin-top: 0;
 			margin-bottom: 0;
 			flex: 0 0 rem(540);
-			margin-right: 4rem;
 		}
 		@media (min-width: $md2) {
 			flex: 0 0 rem(730);
@@ -341,10 +342,10 @@ body {
 		padding: 5.5%;
 		position: relative;
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			inset: 0;
-			background: url("@img/wheel-border.svg") center / contain no-repeat;
+			background: url('@img/wheel-border.svg') center / contain no-repeat;
 			pointer-events: none;
 			z-index: 2;
 		}
@@ -369,7 +370,7 @@ body {
 			width: 100%;
 		}
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -390,8 +391,8 @@ body {
 				width: rem(140);
 			}
 			@media (min-width: $md3) {
-				top: 8.75%;
-				left: -20%;
+				top: 2%;
+				left: -15%;
 				width: rem(80);
 			}
 			@media (min-width: $md2) {
@@ -488,10 +489,10 @@ body {
 			letter-spacing: 0.02544rem;
 		}
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			inset: 0;
-			background: url("@img/btn-bg.png") center / contain no-repeat;
+			background: url('@img/btn-bg.png') center / contain no-repeat;
 			border-radius: 50%;
 			box-shadow: 0 0 rem(20) #000;
 		}
@@ -558,7 +559,7 @@ body {
 	// .main__label
 	&__label {
 		order: 1;
-		padding: 1.56rem;
+		padding: rem(41) rem(80);
 		@media (max-width: $md5) {
 			padding: 0.94rem;
 			margin-top: 1.75rem;
@@ -566,7 +567,7 @@ body {
 			font-size: 1.5rem;
 		}
 		@media (min-width: $md5) {
-			max-width: 85%;
+			width: fit-content;
 			margin-left: auto;
 			margin-right: auto;
 			font-size: 3.5rem;
@@ -574,7 +575,7 @@ body {
 		}
 		@media (min-width: $md2) {
 			margin-top: 6.75rem;
-			max-width: 41.6875rem;
+
 			font-size: 4rem;
 		}
 		border-radius: 7.15625rem;
@@ -589,7 +590,7 @@ body {
 		position: relative;
 		z-index: 1;
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			inset: rem(2.5);
 			@media (min-width: $md2) {
