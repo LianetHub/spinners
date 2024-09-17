@@ -38,11 +38,11 @@
 	<meta property="twitter:image:src" content="">
 	<!-- Twitter -->
 	<!-- plugnis -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240917133747" />
-	<link href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic&_v=20240917133747" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240917135636" />
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic&_v=20240917135636" rel="stylesheet" />
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20240917133747">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240917133747">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20240917135636">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240917135636">
 </head>
 
 <body>
@@ -52,7 +52,7 @@
 				<a href="/" class="header__logo">
 					<img src="img/logo.png" alt="logo">
 				</a>
-				<h1 class="header__title header__title-md"> Gira la rueda y obténel <span class="neon-text">paquete de bienvenida del casino</span>
+				<h1 class="header__title header__title-md"> Gira la rueda y&nbsp;obténel <span class="neon-text">paquete de bienvenida del casino</span>
 				</h1>
 			</div>
 		</header>
@@ -142,11 +142,40 @@
 		<div class="popup__content">
 			<div class="popup__title"> ¡Felicidades! </div>
 			<div class="popup__text"> Consigue un paquete de bienvenida al casino con <span>150% + 50FS</span> en tu primer depósito </div>
-			<a href="" class="popup__btn">Reclamar ahora</a>
+			<a href="" class="popup__btn btn-sign">Reclamar ahora</a>
 		</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20240917133747"></script>
-	<script src="js/app.min.js?_v=20240917133747"></script>
+	<script>
+		function getUrlParameter(name) {
+			const urlParams = new URLSearchParams(window.location.search);
+			return urlParams.get(name);
+		}
+
+		function updateButtonHref() {
+			const stagValue = getUrlParameter("stag");
+			const trackingLink = getUrlParameter("tracking_link");
+			if (stagValue || trackingLink) {
+				const btnsSign = document.querySelectorAll(".btn-sign");
+				btnsSign.forEach(btnSign => {
+					let btnCurrentHref = btnSign.getAttribute("href");
+					let updatedHref = btnCurrentHref;
+					if (stagValue) {
+						updatedHref += (updatedHref.includes("?") ? "&" : "?") + `stag=${stagValue}`;
+					}
+					if (trackingLink) {
+						updatedHref += (updatedHref.includes("?") ? "&" : "?") + `tracking_link=${trackingLink}`;
+					}
+					btnSign.setAttribute("href", updatedHref);
+				})
+			}
+		}
+		window.onload = function() {
+			updateButtonHref();
+		};
+
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20240917135636"></script>
+	<script src="js/app.min.js?_v=20240917135636"></script>
 </body>
 
 </html>

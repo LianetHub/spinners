@@ -3,7 +3,7 @@
 	@font-face {
 		font-family: $font_name;
 		font-display: swap;
-		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		src: url('../fonts/#{$file_name}.woff') format('woff'), url('../fonts/#{$file_name}.woff2') format('woff2');
 		font-weight: #{$weight};
 		font-style: #{$style};
 	}
@@ -24,7 +24,7 @@
 // rem
 
 //К псевдоэлементам
-@mixin pseudo($display: block, $pos: absolute, $content: "") {
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
 	content: $content;
 	display: $display;
 	position: $pos;
@@ -65,7 +65,7 @@
 	$minSizeValue: rem($minSize);
 	$regularSize: rem($startSize);
 
-	@if $property == "font-size" {
+	@if $property == 'font-size' {
 		$minSizeValue: math.div($minSize, 16) + rem;
 		$regularSize: math.div($startSize, 16) + rem;
 	}
@@ -93,7 +93,7 @@
 $dimensions: (
 	desktop: 1920,
 	tablet: 768,
-	mobile: 360,
+	mobile: 375,
 );
 
 @function pxToVw($value, $dimension) {
