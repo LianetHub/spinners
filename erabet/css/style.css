@@ -60,15 +60,15 @@ body.lock {
   position: relative;
   display: none;
   border-radius: 1.375rem;
-  border: 0.375rem solid #00dc83;
   background: #0f172b;
   -webkit-box-shadow: 0 0.25rem 2.8125rem 0 #00dc83;
           box-shadow: 0 0.25rem 2.8125rem 0 #00dc83;
   color: #fff;
-  padding: 1.74rem 3.2rem 1.53rem;
+  padding: 1.74rem 1rem 1.53rem;
   text-align: center;
   font-family: Rubik;
   width: 100%;
+  border: 0.125rem solid #00dc83;
 }
 
 .popup [data-fancybox-close] {
@@ -79,9 +79,9 @@ body.lock {
 .popup::before {
   content: "";
   position: absolute;
-  width: 5rem;
-  height: 6.25rem;
-  left: -1.5rem;
+  width: 7.5rem;
+  height: 7.5rem;
+  left: -2.5rem;
   top: -2.5rem;
   pointer-events: none;
   background: url("../img/screen.png") center/contain no-repeat;
@@ -90,8 +90,8 @@ body.lock {
 .popup::after {
   content: "";
   position: absolute;
-  width: 8.125rem;
-  height: 8.125rem;
+  width: 6.875rem;
+  height: 6.875rem;
   bottom: -3.5rem;
   right: -2rem;
   pointer-events: none;
@@ -120,7 +120,7 @@ body.lock {
 
 .popup__text {
   font-size: 1.425rem;
-  margin-top: 0.82rem;
+  margin-top: 1.5rem;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 109%;
@@ -140,7 +140,7 @@ body.lock {
   line-height: 100%;
   text-transform: uppercase;
   border-radius: 0.358974359em;
-  padding: 0.8205128205em 0.8205128205em 0.8205128205em;
+  padding: 0.6153846154em 2.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -154,7 +154,7 @@ body.lock {
   position: relative;
   z-index: 1;
   font-size: 1.15rem;
-  margin: 1rem auto 0;
+  margin: 1.5625rem auto 0;
   text-align: center;
 }
 
@@ -740,6 +740,7 @@ body.lock {
   }
 
   .popup {
+    border: 0.375rem solid #00dc83;
     padding: 3rem 2.4rem 3.75rem;
     max-width: 49rem;
   }
