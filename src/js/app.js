@@ -36,9 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }], {
                 on: {
                     "done": (instance, current) => {
-                        setTimeout(() => {
-                            spinnerImage.style = ""
-                        }, 1000)
+                        spinnerImage.style = ""
+                    },
+                    "close": (instance, current) => {
+                        spinnerImage.style = ""
                     }
                 }
             });
