@@ -24,22 +24,19 @@
 .popup {
 	position: relative;
 	display: none;
-	border-radius: 0.5rem;
-	border: rem(2) solid #7a7474;
-	background: #000;
+	border-radius: 1.375rem;
+	border: rem(6) solid #00dc83;
+	background: #0f172b;
+	box-shadow: 0 rem(4) rem(45) 0 #00dc83;
 	color: #fff;
 	padding: 1.74rem 3.2rem 1.53rem;
 	text-align: center;
-	max-width: 20rem;
+	font-family: Rubik;
 	width: 100%;
-	&.popup-md {
-		@media (max-width:$md5) {
-			padding: 1.74rem 2rem 1.53rem;
-		}
-	}
+
 	@media (min-width: $md5) {
-		padding: 4.31rem rem(60) 3rem;
-		max-width: 41.5rem;
+		padding: 3rem 2.4rem 3.75rem;
+		max-width: 49rem;
 	}
 	& [data-fancybox-close] {
 		top: 0 !important;
@@ -50,36 +47,36 @@
 		}
 	}
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		width: rem(80);
 		height: rem(100);
 		left: -1.5rem;
 		top: -2.5rem;
 		@media (min-width: $md5) {
-			top: -4rem;
-			left: -4rem;
-			width: rem(159);
-			height: rem(171);
+			top: -8.75rem;
+			left: -9.5rem;
+			width: rem(300);
+			height: rem(320);
 		}
 		pointer-events: none;
-		background: url("@img/inferno-joker.png") center / contain no-repeat;
+		background: url('@img/screen.png') center / contain no-repeat;
 	}
 	&::after {
-		content: "";
+		content: '';
 		position: absolute;
 		width: rem(130);
 		height: rem(130);
 		bottom: -3.5rem;
 		right: -2rem;
 		@media (min-width: $md5) {
-			width: rem(266);
+			width: rem(240);
 			height: rem(266);
 			bottom: -6rem;
-			right: -6rem;
+			right: -7rem;
 		}
 		pointer-events: none;
-		background: url("@img/symbol_bar.png") center / contain no-repeat;
+		background: url('@img/maxresdefault.png') center / contain no-repeat;
 	}
 	&__content {
 		display: flex;
@@ -90,30 +87,39 @@
 	&__title {
 		font-weight: 700;
 		font-size: 1.75rem;
+		text-transform: uppercase;
+		color: #00dc83;
 		@media (min-width: $md5) {
-			font-size: 3.75rem;
+			font-size: 3.875rem;
 		}
 	}
 	// .popup__text
 	&__text {
 		font-size: 1.425rem;
 		margin-top: 0.82rem;
+		text-transform: uppercase;
 		@media (min-width: $md5) {
 			margin-top: 1.5rem;
-			font-size: 3.0625rem;
+			font-size: 2.56569rem;
 		}
 		font-weight: 600;
-		line-height: 100%;
+		line-height: 109%;
 		& span {
-			font-weight: 700;
+			color: #00dc83;
 		}
 	}
 	// .popup__btn
 	&__btn {
-		background: linear-gradient(270deg, #00ec9e 0%, #8e6efa 100%);
+		border-radius: 0.62069rem;
+		background: #00dc83;
+		color: #0f172b;
+		font-family: Rubik;
+
+		font-style: normal;
 		font-weight: 600;
 		line-height: 100%;
 		text-transform: uppercase;
+
 		border-radius: em(0.875, 2.4375);
 		padding: em(2, 2.4375) em(2, 2.4375) em(2, 2.4375);
 		width: fit-content;
@@ -127,19 +133,11 @@
 		text-align: center;
 		@media (min-width: $md5) {
 			min-width: rem(373);
-			padding: em(1.5, 2.4375) rem(30) em(1.7, 2.4375);
-			margin: 2.5rem auto 0;
-			font-size: 2.4375rem;
+			padding: em(1, 2.4375) rem(80) em(1.7, 2.4375);
+			margin: 3rem auto 0;
+			font-size: 2.48275rem;
 		}
-		&::before {
-			content: "";
-			position: absolute;
-			inset: em(0.25, 2.4375);
-			background: #313131;
-			z-index: -1;
-			border-radius: em(0.75, 2.4375);
-			transition: background-color 0.3s ease 0s;
-		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				&::before {

@@ -1,8 +1,8 @@
 // Использование модулей SASS
-@use "sass:math";
+@use 'sass:math';
 // Использование модулей SASS
 // ======================================МИКСИНЫ==============================================
-@import "mixins";
+@import 'mixins';
 // ======================================МИКСИНЫ==============================================
 
 // ======================================ШРИФТЫ===============================================
@@ -14,7 +14,7 @@
 // ======================================ИКОНОЧНЫЙ ШРИФТ======================================
 
 // Шрифт по умолчанию
-$fontfamily: "Manrope";
+$fontfamily: 'Manrope';
 
 // Шрифт по умолчанию
 
@@ -68,7 +68,7 @@ body {
 	min-height: 100%;
 	line-height: normal;
 	color: $text;
-
+	background-color: #0f172b;
 	&.lock {
 		overflow: hidden;
 		@media (min-width: $md2) {
@@ -85,20 +85,20 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	background: url("@img/bg-mobile.jpg") center 0 / cover no-repeat;
+	background: url('@img/bg-mobile.jpg') center 0 / cover no-repeat;
 	@media (min-width: $md5) {
-		background: url("@img/bg.jpg") center 0 / cover no-repeat;
+		background: url('@img/bg.png') center 0 / cover no-repeat;
 	}
 }
 
 //================== ОБОЛОЧКА==================================
 
-@import "./ui";
+@import './ui';
 
 //=============== ОСНОВНАЯ СЕТКА===============================
 
 // Отзывчивая
-[class*="__container"] {
+[class*='__container'] {
 	margin: 0 auto;
 	box-sizing: content-box;
 	max-width: 100%;
@@ -117,7 +117,7 @@ body {
 .header {
 	padding: 1.75rem 0 0rem;
 	@media (min-width: $md3) {
-		padding: 5.25rem 0 2rem;
+		padding: 4.5rem 0 2rem;
 	}
 	// .header__container
 	&__container {
@@ -155,42 +155,22 @@ body {
 		font-size: 1.45rem;
 		line-height: 1;
 		width: 100%;
-
+		display: flex;
+		flex-direction: column;
 		@media (min-width: $md5) {
-			font-size: 2.875rem;
 		}
-		&.header__title-lg {
-			font-size: 1.75rem;
-			@media (max-width: $md5) {
-				.lg-title {
-					margin-bottom: 0.4rem;
-				}
-			}
-			@media (min-width: $md5) {
-				font-size: 3.39081rem;
-			}
-		}
-		&.header__title-md {
-			@media (max-width: $md5) {
-				font-size: 1.6rem;
-				max-width: 90%;
-			}
-		}
-		& .lg-title {
-			font-size: 1.25rem;
-			display: block;
-			margin-bottom: 0.8rem;
-			@media (min-width: $md5) {
-				margin-bottom: 1.06rem;
-				font-size: 3.1875rem;
-			}
-		}
+
 		@media (min-width: $md3) {
 			max-width: 80%;
 		}
 		@media (min-width: $md2) {
 			margin: 0 auto;
 			max-width: rem(1320);
+		}
+		font-size: 3.1875rem;
+		& span {
+			margin-top: 0.5rem;
+			font-size: 3.75rem;
 		}
 	}
 }
@@ -228,6 +208,11 @@ body {
 		& img {
 			width: rem(36);
 		}
+		display: flex;
+		gap: rem(21);
+		align-items: center;
+		font-size: 0.875rem;
+		max-width: 14rem;
 	}
 	// .footer__feedback
 	&__feedback {
@@ -236,14 +221,7 @@ body {
 			flex: 0 0 100%;
 			text-align: center;
 		}
-		& a {
-			transition: color 0.3s ease 0s;
-			@media (any-hover: hover) {
-				&:hover {
-					color: $accent;
-				}
-			}
-		}
+		color: rgba($color: #fff, $alpha: 0.6);
 	}
 	// .footer__links
 	&__links {
@@ -333,45 +311,9 @@ body {
 	overflow: hidden;
 	padding: 1rem 0 0 0;
 	position: relative;
-	@media (max-width: $md5) {
-		&::before {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			width: rem(228);
-			height: rem(111);
-			z-index: 3;
-			pointer-events: none;
-			filter: blur(rem(50));
-			background-image: url("data:image/svg+xml,%3Csvg width='228' height='111' viewBox='0 0 228 111' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2016_3875' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='231' height='111'%3E%3Crect width='231' height='111' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2016_3875)'%3E%3Cellipse cx='168' cy='175.5' rx='166' ry='174.5' fill='url(%23paint0_linear_2016_3875)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_2016_3875' x1='334' y1='175.5' x2='2' y2='175.5' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300EC9E'/%3E%3Cstop offset='1' stop-color='%238E6EFA'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
-		}
-	}
+
 	@media (min-width: $md5) {
 		padding: 0;
-
-		&::before {
-			content: "";
-			position: absolute;
-			bottom: -2rem;
-			right: -4rem;
-			width: rem(414);
-			height: rem(464);
-			pointer-events: none;
-			background-image: url("data:image/svg+xml,%3Csvg width='414' height='464' viewBox='0 0 414 464' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='303.014' cy='363.412' rx='387.5' ry='270.5' transform='rotate(119.435 303.014 363.412)' fill='url(%23paint0_linear_2002_200)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_2002_200' x1='690.514' y1='363.412' x2='-84.4856' y2='363.412' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300EC9E'/%3E%3Cstop offset='1' stop-color='%238E6EFA'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
-			filter: blur(rem(100));
-		}
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: -2rem;
-			left: 0;
-			width: rem(444);
-			height: rem(175);
-			pointer-events: none;
-			filter: blur(rem(50));
-			background-image: url("data:image/svg+xml,%3Csvg width='444' height='175' viewBox='0 0 444 175' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='69.1847' cy='383.889' rx='387.5' ry='370.599' transform='rotate(61.29 69.1847 383.889)' fill='url(%23paint0_linear_2002_196)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_2002_196' x1='456.685' y1='383.889' x2='-318.315' y2='383.889' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300EC9E'/%3E%3Cstop offset='1' stop-color='%238E6EFA'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
-		}
 	}
 	// .main__container
 	&__container {
@@ -391,8 +333,10 @@ body {
 	// .main__image
 	&__image {
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 		display: none;
+		// flex-shrink: 0;
+		// pointer-events: none;
 		@media (min-width: $md5) {
 			display: flex;
 			flex: 0 0 50%;
@@ -402,23 +346,19 @@ body {
 		}
 		&:first-child {
 			order: 1;
-
 			align-self: flex-end;
-
 			@media (min-width: $md2) {
 				order: 0;
-				margin-left: -9rem;
-				max-width: rem(787);
-				transform: translateY(2rem);
+				max-width: rem(917);
+				margin-right: -8rem;
 			}
 		}
 		&:last-child {
 			order: 1;
-
 			@media (min-width: $md2) {
-				max-width: rem(635);
+				max-width: rem(717);
 				order: 0;
-				margin-right: -3.5rem;
+				margin-left: -3rem;
 			}
 		}
 		& img {
@@ -456,10 +396,10 @@ body {
 		padding: 7% 6.5% 6.5%;
 		position: relative;
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			inset: 0;
-			background: url("@img/wheel-border.svg") center / contain no-repeat;
+			background: url('@img/wheel-border.svg') center / contain no-repeat;
 			pointer-events: none;
 			z-index: 2;
 		}
@@ -511,7 +451,7 @@ body {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-
+		background: url('@img/btn-bg.png') center / contain no-repeat;
 		border-radius: 50%;
 		display: flex;
 		justify-content: center;
@@ -519,7 +459,6 @@ body {
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='310' height='310' viewBox='0 0 310 310' fill='none'%3E%3Cg filter='url(%23filter0_f_2002_193)'%3E%3Ccircle cx='155' cy='155' r='107' fill='url(%23paint0_linear_2002_193)'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_2002_193' x='0' y='0' width='310' height='310' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='24' result='effect1_foregroundBlur_2002_193'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_2002_193' x1='262' y1='155' x2='48' y2='155' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300EC9E'/%3E%3Cstop offset='1' stop-color='%238E6EFA'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
 		color: #fff;
 		text-shadow: 0 rem(4.966) rem(4.966) rgba(0, 0, 0, 0.25);
 		font-weight: 800;
@@ -530,13 +469,27 @@ body {
 		width: rem(130);
 		height: rem(130);
 		@media (min-width: $md5) {
-			width: rem(310);
-			height: rem(310);
+			width: rem(246);
+			height: rem(246);
 			font-size: 3.11956rem;
 		}
 		& span {
 			pointer-events: none;
+			color: #fff;
+			position: relative;
+			z-index: 2;
 			animation: pulse 1s ease infinite;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #01dd83;
+			border-radius: 50%;
+			filter: blur(24px);
 		}
 	}
 }
