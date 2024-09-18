@@ -38,11 +38,11 @@
 	<meta property="twitter:image:src" content="">
 	<!-- Twitter -->
 	<!-- plugnis -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240917135945" />
-	<link href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic&_v=20240917135945" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20240918200933" />
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic&_v=20240918200933" rel="stylesheet" />
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20240917135945">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240917135945">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20240918200933">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240918200933">
 </head>
 
 <body>
@@ -124,17 +124,10 @@
 				<div class="footer__license">
 					<img src="img/license-logo.png" alt="lisence">
 				</div>
-				<div class="footer__payments">
-					<div class="footer__payment">
-						<img src="img/directa.png" alt="payment">
-					</div>
-					<div class="footer__payment">
-						<img src="img/paysafe.png" alt="payment">
-					</div>
-					<div class="footer__payment">
-						<img src="img/safety-pay.png" alt="payment">
-					</div>
-				</div>
+				<picture class="footer__payments">
+					<source media="(min-width: 768px)" srcset="img/payments.png">
+					<img src="img/payments-mobile.png" alt="payments">
+				</picture>
 			</div>
 		</footer>
 	</div>
@@ -174,8 +167,8 @@
 		};
 
 	</script>
-	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20240917135945"></script>
-	<script src="js/app.min.js?_v=20240917135945"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20240918200933"></script>
+	<script src="js/app.min.js?_v=20240918200933"></script>
 </body>
 
 </html>

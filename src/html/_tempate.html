@@ -88,17 +88,10 @@
                     <div class="footer__license">
                         <img src="@img/license-logo.png" alt="lisence">
                     </div>
-                    <div class="footer__payments">
-                        <div class="footer__payment">
-                            <img src="@img/directa.png" alt="payment">
-                        </div>
-                        <div class="footer__payment">
-                            <img src="@img/paysafe.png" alt="payment">
-                        </div>
-                        <div class="footer__payment">
-                            <img src="@img/safety-pay.png" alt="payment">
-                        </div>
-                    </div>
+                    <picture class="footer__payments">
+                        <source media="(min-width: 768px)" srcset="@img/payments.png">
+                        <img src="@img/payments-mobile.png" alt="payments">
+                    </picture>
                 </div>
             </footer>
         </div>

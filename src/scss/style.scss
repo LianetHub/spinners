@@ -183,7 +183,7 @@ body {
 .footer {
 	padding: 0.93rem 0 1.8rem;
 	@media (min-width: $md5) {
-		padding: 1.06rem 0;
+		padding: 1.25rem 0;
 	}
 	background: #050505;
 	// .footer__container
@@ -193,6 +193,7 @@ body {
 		justify-content: center;
 		flex-wrap: wrap;
 		gap: 1rem;
+		max-width: rem(1860);
 		@media (min-width: $md5) {
 			gap: 2rem;
 			justify-content: stretch;
@@ -243,7 +244,6 @@ body {
 			justify-content: flex-start;
 		}
 		@media (min-width: $md2) {
-			padding-left: 4.5rem;
 			justify-content: center;
 			order: 0;
 			margin: 0 auto;
@@ -253,6 +253,7 @@ body {
 	// .footer__link
 	&__link {
 		transition: color 0.3s ease 0s;
+		white-space: nowrap;
 		@media (any-hover: hover) {
 			&:hover {
 				color: $accent;
@@ -262,31 +263,20 @@ body {
 
 	// .footer__payments
 	&__payments {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-		gap: 1.69rem;
-
 		flex: 0 0 100%;
+		display: flex;
+		justify-content: center;
 		@media (min-width: $md5) {
-			justify-content: flex-end;
-			flex: 0 0 calc(50% - 2rem);
+			justify-content: flex-start;
 		}
 		@media (min-width: $md2) {
-			margin-left: 2rem;
-
+			justify-content: flex-end;
+			margin-left: 3rem;
 			flex: 0 1 auto;
 		}
 	}
-	// .footer__payment
-	&__payment {
-		& img {
-			max-height: 1.0995rem;
-			@media (min-width: $md5) {
-				max-height: 1.8125rem;
-			}
-		}
+	&__license {
+		margin-left: 2rem;
 	}
 }
 
@@ -340,6 +330,18 @@ body {
 		}
 		&:last-child {
 			order: 1;
+			@media (min-width: $md4) {
+				position: relative;
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: rem(70);
+					right: rem(15);
+					width: rem(300);
+					height: rem(300);
+					background: url('@img/maxresdefault.png') center / contain no-repeat;
+				}
+			}
 			@media (min-width: $md2) {
 				max-width: rem(717);
 				order: 0;
@@ -358,6 +360,9 @@ body {
 		margin-top: auto;
 		@media (min-width: $md5) {
 			display: none;
+		}
+		& img {
+			width: 100%;
 		}
 	}
 	// .main__spinner
