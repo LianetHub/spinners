@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: "Manrope", Roboto, sans-serif;
   font-size: 1rem;
   min-width: 20rem;
   min-height: 100%;
@@ -233,10 +233,6 @@ body.lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.font-roboto {
-  font-family: Roboto;
 }
 
 .header {
