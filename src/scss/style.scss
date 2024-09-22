@@ -1,20 +1,20 @@
 // Использование модулей SASS
-@use "sass:math";
+@use 'sass:math';
 // Использование модулей SASS
 // ======================================МИКСИНЫ==============================================
-@import "mixins";
+@import 'mixins';
 // ======================================МИКСИНЫ==============================================
 
 // ======================================ШРИФТЫ===============================================
 @import url(https://fonts.googleapis.com/css?family=Manrope:regular,600,700,800);
-
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 // ======================================ШРИФТЫ===============================================
 // ======================================ИКОНОЧНЫЙ ШРИФТ======================================
 
 // ======================================ИКОНОЧНЫЙ ШРИФТ======================================
 
 // Шрифт по умолчанию
-$fontfamily: "Manrope";
+$fontfamily: 'Manrope';
 
 // Шрифт по умолчанию
 
@@ -85,20 +85,20 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	background: url("@img/bg-mobile.jpg") center 0 / cover no-repeat;
+	background: url('@img/bg-mobile.jpg') center 0 / cover no-repeat;
 	@media (min-width: $md5) {
-		background: url("@img/bg.jpg") center 0 / cover no-repeat;
+		background: url('@img/bg.jpg') center 0 / cover no-repeat;
 	}
 }
 
 //================== ОБОЛОЧКА==================================
 
-@import "./ui";
+@import './ui';
 
 //=============== ОСНОВНАЯ СЕТКА===============================
 
 // Отзывчивая
-[class*="__container"] {
+[class*='__container'] {
 	margin: 0 auto;
 	box-sizing: content-box;
 	max-width: 100%;
@@ -113,7 +113,9 @@ body {
 	flex-direction: column;
 }
 // ========================================================
-
+.font-roboto {
+	font-family: Roboto;
+}
 .header {
 	padding: 1.75rem 0 0rem;
 	@media (min-width: $md3) {
@@ -337,7 +339,7 @@ body {
 		position: relative;
 		overflow: hidden;
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -395,10 +397,10 @@ body {
 		padding: 7% 6.5% 6.5%;
 		position: relative;
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			inset: 0;
-			background: url("@img/wheel-border.png") center / contain no-repeat;
+			background: url('@img/wheel-border.png') center / contain no-repeat;
 			pointer-events: none;
 			z-index: 2;
 		}
@@ -457,7 +459,7 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background: url("@img/btn-bg.png") center / contain no-repeat;
+		background: url('@img/btn-bg.png') center / contain no-repeat;
 		color: #fff;
 
 		font-weight: 800;
@@ -478,6 +480,12 @@ body {
 			font-weight: 800;
 			letter-spacing: 0.02438rem;
 			text-transform: uppercase;
+		}
+		&.sm-text {
+			font-size: rem(11);
+			@media (min-width: $md5) {
+				font-size: rem(25);
+			}
 		}
 		& span {
 			pointer-events: none;
@@ -515,7 +523,7 @@ body {
 	border-radius: 50%;
 	background-color: #fff;
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -526,7 +534,7 @@ body {
 			width: rem(140);
 			height: rem(140);
 		}
-		background: url("@img/flash.png") center / contain no-repeat;
+		background: url('@img/flash.png') center / contain no-repeat;
 		mix-blend-mode: screen;
 	}
 	mix-blend-mode: screen;
