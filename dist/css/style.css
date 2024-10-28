@@ -285,24 +285,18 @@ body.lock {
   text-shadow: 0 0.125rem 3.84375rem #00ffa3;
   font-weight: 800;
   text-transform: uppercase;
-  font-size: 1.125rem;
+  font-size: 1.5625rem;
   line-height: 1;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.header__title .sm-text {
+  display: block;
+  font-size: 1.125rem;
 }
 
 .header__title .gradient-text {
   text-align: center;
-  font-size: 1.5625rem;
 }
 
 .footer {
@@ -848,11 +842,11 @@ body.lock {
   }
 
   .header__title {
-    font-size: 3.1875rem;
+    font-size: 3.39081rem;
   }
 
-  .header__title .gradient-text {
-    font-size: 4rem;
+  .header__title .sm-text {
+    font-size: 3.1875rem;
   }
 
   .footer {

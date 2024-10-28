@@ -199,14 +199,12 @@ body {
 		text-shadow: 0 rem(2) rem(61.5) #00ffa3;
 		font-weight: 800;
 		text-transform: uppercase;
-		font-size: 1.125rem;
+		font-size: 1.5625rem;
 		line-height: 1;
 		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+
 		@media (min-width: $md5) {
-			font-size: 3.1875rem;
+			font-size: 3.39081rem;
 		}
 		@media (min-width: $md3) {
 			max-width: 80%;
@@ -215,12 +213,15 @@ body {
 			margin: 0 auto;
 			max-width: rem(1320);
 		}
+		.sm-text {
+			display: block;
+			font-size: 1.125rem;
+			@media (min-width: $md5) {
+				font-size: 3.1875rem;
+			}
+		}
 		.gradient-text {
 			text-align: center;
-			font-size: 1.5625rem;
-			@media (min-width: $md5) {
-				font-size: 4rem;
-			}
 		}
 	}
 }
