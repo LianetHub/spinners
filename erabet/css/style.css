@@ -249,6 +249,10 @@ body.lock {
   width: 9rem;
 }
 
+.header__logo-partner {
+  width: 9rem;
+}
+
 .header__title {
   color: #fff;
   text-align: center;
@@ -258,25 +262,21 @@ body.lock {
   font-size: 1.45rem;
   line-height: 1;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.header__title.header__title-lg {
-  font-size: 1.75rem;
-}
-
-.header__title.header__title-sm {
-  max-width: 70rem;
-  font-size: 1.1875rem;
-}
-
-.header__title.header__title-sm .lg-title {
-  font-size: 1.3125rem;
-}
-
-.header__title .lg-title {
-  font-size: 1.25rem;
-  display: block;
-  margin-bottom: 0.8rem;
+.header__title .gradient-text {
+  font-size: 4rem;
+  text-align: center;
 }
 
 .footer {
@@ -803,24 +803,11 @@ body.lock {
     width: auto;
   }
 
+  .header__logo-partner {
+    width: auto;
+  }
+
   .header__title {
-    font-size: 2.875rem;
-  }
-
-  .header__title.header__title-lg {
-    font-size: 3.39081rem;
-  }
-
-  .header__title.header__title-sm {
-    font-size: 2.6875rem;
-  }
-
-  .header__title.header__title-sm .lg-title {
-    font-size: 3.0625rem;
-  }
-
-  .header__title .lg-title {
-    margin-bottom: 1.06rem;
     font-size: 3.1875rem;
   }
 
@@ -980,6 +967,13 @@ body.lock {
     width: 16.25rem;
   }
 
+  .header__logo-partner {
+    position: absolute;
+    top: -1rem;
+    right: 2rem;
+    width: 11rem;
+  }
+
   .header__title {
     margin: 0 auto;
     max-width: 82.5rem;
@@ -1070,15 +1064,6 @@ body.lock {
 @media (max-width: 575.98px) {
   .popup.popup-md {
     padding: 1.74rem 2rem 1.53rem;
-  }
-
-  .header__title.header__title-lg .lg-title {
-    margin-bottom: 0.4rem;
-  }
-
-  .header__title.header__title-md {
-    font-size: 1.6rem;
-    max-width: 90%;
   }
 
   .footer__feedback {

@@ -38,10 +38,10 @@
 	<meta property="twitter:image:src" content="">
 	<!-- Twitter -->
 	<!-- plugnis -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20241028224823" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20241028225238" />
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20241028224823">
-	<link rel="stylesheet" href="css/style.min.css?_v=20241028224823">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20241028225238">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241028225238">
 </head>
 
 <body>
@@ -51,7 +51,7 @@
 				<a href="/" class="header__logo">
 					<img src="img/logo.svg" alt="logo">
 				</a>
-				<h1 class="header__title header__title-lg"> Spin The Wheel and <span class="gradient-text">Win Casino Welcome Bundle</span>
+				<h1 class="header__title"> Spin The Wheel and <span class="gradient-text">Win Casino Welcome Bundle</span>
 				</h1>
 				<a href="" class="header__logo-partner">
 					<img src="img/Endorphina.png" alt="logo">
@@ -174,8 +174,37 @@
 			<a href="" class="popup__btn">Claim Now</a>
 		</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20241028224823"></script>
-	<script src="js/app.min.js?_v=20241028224823"></script>
+	<script>
+		function getUrlParameter(name) {
+			const urlParams = new URLSearchParams(window.location.search);
+			return urlParams.get(name);
+		}
+
+		function updateButtonHref() {
+			const stagValue = getUrlParameter("stag");
+			const trackingLink = getUrlParameter("tracking_link");
+			if (stagValue || trackingLink) {
+				const btnsSign = document.querySelectorAll(".btn-sign");
+				btnsSign.forEach(btnSign => {
+					let btnCurrentHref = btnSign.getAttribute("href");
+					let updatedHref = btnCurrentHref;
+					if (stagValue) {
+						updatedHref += (updatedHref.includes("?") ? "&" : "?") + `stag=${stagValue}`;
+					}
+					if (trackingLink) {
+						updatedHref += (updatedHref.includes("?") ? "&" : "?") + `tracking_link=${trackingLink}`;
+					}
+					btnSign.setAttribute("href", updatedHref);
+				})
+			}
+		}
+		window.onload = function() {
+			updateButtonHref();
+		};
+
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20241028225238"></script>
+	<script src="js/app.min.js?_v=20241028225238"></script>
 </body>
 
 </html>
