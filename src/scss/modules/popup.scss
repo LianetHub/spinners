@@ -60,13 +60,13 @@
 		left: -1.5rem;
 		top: -2.5rem;
 		@media (min-width: $md5) {
-			top: -6rem;
-			left: -8rem;
-			width: rem(220);
-			height: rem(220);
+			top: -4rem;
+			left: -5.5rem;
+			width: rem(170);
+			height: rem(170);
 		}
 		pointer-events: none;
-		background: url('@img/chicken.png') center / contain no-repeat;
+		background: url('@img/seven.png') center / contain no-repeat;
 	}
 	&::after {
 		content: '';
@@ -76,13 +76,13 @@
 		bottom: -2.5rem;
 		right: -1rem;
 		@media (min-width: $md5) {
-			width: rem(160);
-			height: rem(160);
+			width: rem(200);
+			height: rem(200);
 			bottom: -4rem;
 			right: -4rem;
 		}
 		pointer-events: none;
-		background: url('@img/bonus.png') center / contain no-repeat;
+		background: url('@img/scatter.png') center / contain no-repeat;
 	}
 	&__content {
 		display: flex;
