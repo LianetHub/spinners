@@ -83,7 +83,7 @@ body.lock {
   left: -1.5rem;
   top: -2.5rem;
   pointer-events: none;
-  background: url("../img/bonus.png") center/contain no-repeat;
+  background: url("../img/chicken.png") center/contain no-repeat;
 }
 
 .popup::after {
@@ -94,7 +94,7 @@ body.lock {
   bottom: -2.5rem;
   right: -1rem;
   pointer-events: none;
-  background: url("../img/chicken.png") center/contain no-repeat;
+  background: url("../img/bonus.png") center/contain no-repeat;
 }
 
 .popup__content {
