@@ -33,7 +33,7 @@
 	max-width: 20rem;
 	width: 100%;
 	&.popup-md {
-		@media (max-width:$md5) {
+		@media (max-width: $md5) {
 			padding: 1.74rem 2rem 1.53rem;
 		}
 	}
@@ -44,42 +44,45 @@
 	& [data-fancybox-close] {
 		top: 0 !important;
 		right: 0 !important;
+
 		@media (min-width: $md5) {
-			top: 1rem !important;
-			right: 1rem !important;
+			--f-button-svg-width: #{rem(30)} !important;
+			--f-button-svg-height: #{rem(30)} !important;
+			top: 1.5rem !important;
+			right: 1.5rem !important;
 		}
 	}
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		width: rem(80);
 		height: rem(100);
 		left: -1.5rem;
 		top: -2.5rem;
 		@media (min-width: $md5) {
-			top: -4rem;
-			left: -4rem;
-			width: rem(159);
-			height: rem(171);
+			top: -6rem;
+			left: -8rem;
+			width: rem(220);
+			height: rem(220);
 		}
 		pointer-events: none;
-		background: url("@img/inferno-joker.png") center / contain no-repeat;
+		background: url('@img/bonus.png') center / contain no-repeat;
 	}
 	&::after {
-		content: "";
+		content: '';
 		position: absolute;
-		width: rem(130);
-		height: rem(130);
-		bottom: -3.5rem;
-		right: -2rem;
+		width: rem(80);
+		height: rem(80);
+		bottom: -2.5rem;
+		right: -1rem;
 		@media (min-width: $md5) {
-			width: rem(266);
-			height: rem(266);
-			bottom: -6rem;
-			right: -6rem;
+			width: rem(160);
+			height: rem(160);
+			bottom: -4rem;
+			right: -4rem;
 		}
 		pointer-events: none;
-		background: url("@img/symbol_bar.png") center / contain no-repeat;
+		background: url('@img/chicken.png') center / contain no-repeat;
 	}
 	&__content {
 		display: flex;
@@ -97,10 +100,10 @@
 	// .popup__text
 	&__text {
 		font-size: 1.425rem;
-		margin-top: 0.82rem;
+		margin-top: 1rem;
 		@media (min-width: $md5) {
 			margin-top: 1.5rem;
-			font-size: 3.0625rem;
+			font-size: 3.4375rem;
 		}
 		font-weight: 600;
 		line-height: 100%;
@@ -115,7 +118,7 @@
 		line-height: 100%;
 		text-transform: uppercase;
 		border-radius: em(0.875, 2.4375);
-		padding: em(2, 2.4375) em(2, 2.4375) em(2, 2.4375);
+		padding: em(2, 2.4375) em(4.5, 2.4375) em(2, 2.4375);
 		width: fit-content;
 		width: auto;
 		display: flex;
@@ -123,16 +126,16 @@
 		position: relative;
 		z-index: 1;
 		font-size: 1.15rem;
-		margin: 1rem auto 0;
+		margin: 1.75rem auto 0;
 		text-align: center;
 		@media (min-width: $md5) {
 			min-width: rem(373);
 			padding: em(1.5, 2.4375) rem(30) em(1.7, 2.4375);
-			margin: 2.5rem auto 0;
+			margin: 3.5rem auto 0;
 			font-size: 2.4375rem;
 		}
 		&::before {
-			content: "";
+			content: '';
 			position: absolute;
 			inset: em(0.25, 2.4375);
 			background: #313131;

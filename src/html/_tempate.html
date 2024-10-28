@@ -7,15 +7,18 @@
         <div class="wrapper">
             <header class="header">
                 <div class="header__container">
-                    <a href="/" class="header__logo">
-                        <img src="@img/logo.svg" alt="logo">
-                    </a>
+                    <div class="header__logotypes">
+                        <a href="/" class="header__logo">
+                            <img src="@img/logo.svg" alt="logo">
+                        </a>
+                        <span class="header__logotypes-separator"></span>
+                        <a href="" class="header__logo-partner">
+                            <img src="@img/Endorphina.png" alt="logo">
+                        </a>
+                    </div>
                     <h1 class="header__title">
                         @@title
                     </h1>
-                    <a href="" class="header__logo-partner">
-                        <img src="@img/Endorphina.png" alt="logo">
-                    </a>
                 </div>
             </header>
             <main class="page">
@@ -69,9 +72,9 @@
                         <div class="main__image">
                             <img src="@img/img-2.png" alt="img">
                         </div>
-                        <div class="main__image-mobile">
-                            <img src="@img/mobile-img.png" alt="img">
-                        </div>
+                    </div>
+                    <div class="main__image-mobile">
+                        <img src="@img/mobile-img.png" alt="img">
                     </div>
                 </section>
             </main>
@@ -85,10 +88,6 @@
                     </div>
                     <div class="footer__feedback">
                         @@feedback:<a href="mailto:hello@erabet.io">hello@erabet.io</a>
-                    </div>
-                    <div class="footer__links">
-                        <a href="" class="footer__link">@@privacy-1</a>
-                        <a href="" class="footer__link">@@privacy-2</a>
                     </div>
                     <div class="footer__socials">
                         <a href="" class="footer__social">
@@ -107,6 +106,11 @@
                             <img src="@img/icons/tiktok.svg" alt="tiktok icon">
                         </a>
                     </div>
+                    <div class="footer__links">
+                        <a href="" class="footer__link">@@privacy-1</a>
+                        <a href="" class="footer__link">@@privacy-2</a>
+                    </div>
+
                     <div class="footer__payments">
                         @@if(lang==='ru') {
                         <div class="footer__payment">
@@ -159,7 +163,7 @@
                 <div class="popup__text">
                     @@text-popup
                 </div>
-                <a href="" class="popup__btn">@@btn-text</a>
+                <a href="" class="popup__btn btn-sign">@@btn-text</a>
             </div>
         </div>
         @@include('_js.html', {})
