@@ -8,7 +8,7 @@
 }
 
 .fancybox__backdrop {
-	background: rgba(0, 0, 0, 0.83);
+	background: rgba(0, 0, 0, 0.85);
 }
 
 .fancybox__content {
@@ -25,17 +25,20 @@
 	position: relative;
 	display: none;
 	border-radius: 0.5rem;
-	border: rem(2) solid #7a7474;
-	background: #000;
+
 	color: #fff;
-	padding: 1.74rem 3.2rem 1.53rem;
+	padding: 1rem 1.5rem 1.53rem;
 	text-align: center;
 	max-width: 20rem;
 	width: 100%;
+	background: linear-gradient(270deg, #00ec9e 0%, #8e6efa 100%);
+	box-shadow: 0 0 rem(40) rgba($color: #00ec9e, $alpha: 0.5);
 	@media (min-width: $md5) {
-		padding: 4.31rem rem(60) 3rem;
-		max-width: 41.5rem;
+		border-radius: 1.375rem;
+		padding: 1.875rem rem(60) 2.69rem;
+		max-width: 55.75rem;
 	}
+
 	& [data-fancybox-close] {
 		top: 0 !important;
 		right: 0 !important;
@@ -47,100 +50,76 @@
 	&::before {
 		content: "";
 		position: absolute;
-		width: rem(80);
-		height: rem(100);
-		left: -1.5rem;
-		top: -2.5rem;
+		width: rem(70);
+		height: rem(70);
+		right: -1.5rem;
+		top: -1.5rem;
 		@media (min-width: $md5) {
-			top: -4rem;
-			left: -4rem;
-			width: rem(159);
-			height: rem(171);
+			top: -5rem;
+			right: -4rem;
+			width: 12rem;
+			height: 12rem;
 		}
 		pointer-events: none;
-		background: url("@img/inferno-joker.png") center / contain no-repeat;
+		background: url("@img/Sweet-Bonanza.png") center / contain no-repeat;
 	}
 	&::after {
 		content: "";
 		position: absolute;
-		width: rem(130);
-		height: rem(130);
-		bottom: -3.5rem;
-		right: -2rem;
+		width: rem(70);
+		height: rem(70);
+		bottom: -1.5rem;
+		left: -1rem;
 		@media (min-width: $md5) {
-			width: rem(266);
-			height: rem(266);
-			bottom: -6rem;
-			right: -6rem;
+			width: 8rem;
+			height: 8rem;
+			bottom: -3rem;
+			left: -3rem;
 		}
 		pointer-events: none;
-		background: url("@img/symbol_bar.png") center / contain no-repeat;
+		background: url("@img/Scatter_multiplier_1000X.png") center / contain no-repeat;
 	}
 	&__content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		&::before {
+			content: "";
+			position: absolute;
+			inset: rem(4);
+			border-radius: 1.375rem;
+			background: #0f172b;
+			z-index: -1;
+		}
 	}
 	// .popup__title
 	&__title {
 		font-weight: 700;
-		font-size: 1.75rem;
+		font-size: 1.48588rem;
+		text-transform: uppercase;
 		@media (min-width: $md5) {
-			font-size: 3.75rem;
+			font-size: 3.875rem;
 		}
 	}
 	// .popup__text
 	&__text {
-		font-size: 1.425rem;
-		margin-top: 0.82rem;
+		font-size: 1.125rem;
+		margin-top: 0.5rem;
 		@media (min-width: $md5) {
 			margin-top: 1.5rem;
-			font-size: 3.0625rem;
+			font-size: 3.4375rem;
 		}
-		font-weight: 600;
-		line-height: 100%;
-		& span {
-			font-weight: 700;
-		}
+		line-height: 109%;
+		text-transform: uppercase;
+		font-weight: 700;
 	}
 	// .popup__btn
 	&__btn {
-		background: linear-gradient(270deg, #00ec9e 0%, #8e6efa 100%);
-		font-weight: 600;
-		line-height: 100%;
-		text-transform: uppercase;
-		border-radius: em(0.875, 2.4375);
-		padding: em(2, 2.4375) em(5.06, 2.4375) em(2, 2.4375);
-		width: fit-content;
-		width: auto;
-		display: flex;
-		justify-content: center;
-		position: relative;
-		z-index: 1;
-		font-size: 1.15rem;
 		margin: 1rem auto 0;
-		text-align: center;
+		width: auto;
 		@media (min-width: $md5) {
 			min-width: rem(373);
-			padding: em(1.5, 2.4375) rem(30) em(1.7, 2.4375);
 			margin: 2.5rem auto 0;
-			font-size: 2.4375rem;
-		}
-		&::before {
-			content: "";
-			position: absolute;
-			inset: em(0.25, 2.4375);
-			background: #313131;
-			z-index: -1;
-			border-radius: em(0.75, 2.4375);
-			transition: background-color 0.3s ease 0s;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				&::before {
-					background: #131313;
-				}
-			}
 		}
 	}
 }

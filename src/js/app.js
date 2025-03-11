@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const spinnerImage = document.querySelector('.main__spinner-wheel');
 
     spinnerBtn.addEventListener('click', () => {
-
-        const turns = 2.75;
+        spinnerBtn.style.pointerEvents = "none";
+        const turns = 2.5;
         const duration = 3;
 
         const totalDegrees = turns * 360;
@@ -36,9 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }], {
                 on: {
                     "done": (instance, current) => {
-                        setTimeout(() => {
-                            spinnerImage.style = ""
-                        }, 1000)
+                        spinnerBtn.style = "none";
+                    },
+                    "close": (instance, current) => {
+                        spinnerImage.style = ""
+
                     }
                 }
             });
@@ -67,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         repeat: -1,
         ease: "none"
     });
+
 
 
 })
